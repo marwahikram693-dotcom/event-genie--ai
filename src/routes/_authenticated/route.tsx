@@ -19,16 +19,9 @@ export const Route = createFileRoute("/_authenticated")({
 
 
 function Shell() {
-  const navigate = useNavigate();
-  const qc = useQueryClient();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  const signOut = async () => {
-    await qc.cancelQueries();
-    qc.clear();
-    await supabase.auth.signOut();
-    navigate({ to: "/auth", replace: true });
-  };
+
 
   return (
     <div className="min-h-screen bg-background">
