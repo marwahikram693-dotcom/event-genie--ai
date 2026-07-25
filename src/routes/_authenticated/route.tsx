@@ -1,18 +1,22 @@
-import { createFileRoute, Outlet, redirect, Link, useNavigate, useRouterState } from "@tanstack/react-router";
+import { createFileRoute, Outlet, Link, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
-import { Sparkles, LayoutDashboard, CalendarPlus, LogOut, Bot } from "lucide-react";
+import { Sparkles, LayoutDashboard, CalendarPlus, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useQueryClient } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
   beforeLoad: async () => {
-    const { data, error } = await supabase.auth.getUser();
-    if (error || !data.user) throw redirect({ to: "/auth" });
+    const { data } = await supabase.auth.getUser();
+    if (!data.user) {
+      const { data: anon, error } = await supabase.auth.signInAnonymously();
+      if (error || !anon.user) throw new Error(error?.message ?? "Could not start session");
+      return { user: anon.user };
+    }
     return { user: data.user };
   },
   component: Shell,
 });
+
 
 function Shell() {
   const navigate = useNavigate();
