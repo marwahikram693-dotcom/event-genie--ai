@@ -1,30 +1,27 @@
-import { createFileRoute, Outlet, redirect, Link, useNavigate, useRouterState } from "@tanstack/react-router";
+import { createFileRoute, Outlet, Link, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
-import { Sparkles, LayoutDashboard, CalendarPlus, LogOut, Bot } from "lucide-react";
+import { Sparkles, LayoutDashboard, CalendarPlus, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useQueryClient } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
   beforeLoad: async () => {
-    const { data, error } = await supabase.auth.getUser();
-    if (error || !data.user) throw redirect({ to: "/auth" });
+    const { data } = await supabase.auth.getUser();
+    if (!data.user) {
+      const { data: anon, error } = await supabase.auth.signInAnonymously();
+      if (error || !anon.user) throw new Error(error?.message ?? "Could not start session");
+      return { user: anon.user };
+    }
     return { user: data.user };
   },
   component: Shell,
 });
 
+
 function Shell() {
-  const navigate = useNavigate();
-  const qc = useQueryClient();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
-  const signOut = async () => {
-    await qc.cancelQueries();
-    qc.clear();
-    await supabase.auth.signOut();
-    navigate({ to: "/auth", replace: true });
-  };
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,10 +52,7 @@ function Shell() {
                 <span className="hidden md:inline">New event</span>
               </Button>
             </Link>
-            <Button variant="ghost" size="sm" onClick={signOut}>
-              <LogOut className="h-4 w-4 md:mr-2" />
-              <span className="hidden md:inline">Sign out</span>
-            </Button>
+
           </nav>
         </div>
       </header>

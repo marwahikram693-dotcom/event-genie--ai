@@ -26,9 +26,9 @@ function Landing() {
             <span className="font-display text-lg font-bold">EventGenie <span className="text-primary">AI</span></span>
           </Link>
           <div className="flex items-center gap-2">
-            <Link to="/auth"><Button variant="ghost">Sign in</Button></Link>
-            <Link to="/auth"><Button>Get started</Button></Link>
+            <Link to="/dashboard"><Button>Open app</Button></Link>
           </div>
+
         </div>
       </header>
 
@@ -46,9 +46,10 @@ function Landing() {
             Timelines, budgets, food ideas, decorations, shopping lists — generated in seconds. Made for students, families, and professionals.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/auth"><Button size="lg" className="shadow-glow">Start planning free</Button></Link>
-            <Link to="/auth"><Button size="lg" variant="outline">Sign in</Button></Link>
+            <Link to="/dashboard"><Button size="lg" className="shadow-glow">Start planning free</Button></Link>
+            <Link to="/assistant"><Button size="lg" variant="outline">Try AI Assistant</Button></Link>
           </div>
+
         </div>
       </section>
 
