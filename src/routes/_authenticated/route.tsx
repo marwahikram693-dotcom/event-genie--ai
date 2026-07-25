@@ -52,10 +52,7 @@ function Shell() {
                 <span className="hidden md:inline">New event</span>
               </Button>
             </Link>
-            <Button variant="ghost" size="sm" onClick={signOut}>
-              <LogOut className="h-4 w-4 md:mr-2" />
-              <span className="hidden md:inline">Sign out</span>
-            </Button>
+
           </nav>
         </div>
       </header>
