@@ -26,9 +26,9 @@ function Landing() {
             <span className="font-display text-lg font-bold">EventGenie <span className="text-primary">AI</span></span>
           </Link>
           <div className="flex items-center gap-2">
-            <Link to="/auth"><Button variant="ghost">Sign in</Button></Link>
-            <Link to="/auth"><Button>Get started</Button></Link>
+            <Link to="/dashboard"><Button>Open app</Button></Link>
           </div>
+
         </div>
       </header>
 
