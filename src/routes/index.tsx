@@ -7,8 +7,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "EventGenie AI — Plan events effortlessly" },
       { name: "description", content: "AI-powered planning for birthdays, weddings, meetings and parties. Timeline, budget, guests and checklist in one place." },
-      { property: "og:title", content: "EventGenie AI" },
-      { property: "og:description", content: "AI-powered event planning made simple." },
+      { property: "og:title", content: "EventGenie AI — Plan events effortlessly" },
+      { property: "og:description", content: "AI-powered planning for birthdays, weddings, meetings and parties. Timeline, budget, guests and checklist in one place." },
     ],
   }),
   component: Landing,
