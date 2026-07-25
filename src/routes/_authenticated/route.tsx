@@ -1,6 +1,6 @@
 import { createFileRoute, Outlet, redirect, Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
-import { Sparkles, LayoutDashboard, CalendarPlus, LogOut } from "lucide-react";
+import { Sparkles, LayoutDashboard, CalendarPlus, LogOut, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQueryClient } from "@tanstack/react-query";
 
@@ -41,6 +41,12 @@ function Shell() {
               <Button variant={pathname === "/dashboard" ? "secondary" : "ghost"} size="sm">
                 <LayoutDashboard className="h-4 w-4 md:mr-2" />
                 <span className="hidden md:inline">Dashboard</span>
+              </Button>
+            </Link>
+            <Link to="/assistant">
+              <Button variant={pathname === "/assistant" ? "secondary" : "ghost"} size="sm">
+                <Bot className="h-4 w-4 md:mr-2" />
+                <span className="hidden md:inline">AI Assistant</span>
               </Button>
             </Link>
             <Link to="/events/new">
