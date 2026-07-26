@@ -26,14 +26,48 @@
 - **AI:** Lovable.dev + GPT-4o
 - **Deployment:** Lovable Hosting
 - **Version Control:** GitHub
+  ## Screenshots
 
-## f. Screenshots
-![Homepage](screenshot1.png)
-![AI Planner](screenshot2.png)
-![Budget Page](screenshot3.png)
+### Homepage
+![Homepage](Screenshot%202026-07-26%20163712.png)
 
-## g. How to run locally
-1. `git clone https://github.com/marwahikram693-dotcom/dream-event-spark.git`
-2. `npm install`
-3. `npm run dev`
-4. Open http://localhost:5173
+### Dashboard
+![Dashboard](Screenshot%202026-07-26%20163737.png)
+
+### Event Creation Page
+![Event Creation](Screenshot%202026-07-26%20164116.png)
+
+### AI Planner Page
+![AI Planner](Screenshot%202026-07-26%20164227.png)
+
+### Budget Page
+![Budget Page](Screenshot%202026-07-26%20164248.png)
+
+### Guest Management
+![Guest Management](Screenshot%202026-07-26%20164601.png)
+
+### Checklist Page
+![Checklist](Screenshot%202026-07-26%20165000.png)
+
+### Event Details
+![Event Details](Screenshot%202026-07-26%20165027.png)
+
+## How to Run Locally
+
+Follow these steps to run EventGenie AI on your computer:
+
+## How to Run Locally
+
+Follow these steps to run EventGenie AI on your computer:
+
+1. Clone the repository:
+git clone https://github.com/marwahikram693-dotcom/dream-event-spark.git
+
+2. Go to the project folder:
+cd dream-event-spark
+
+3. Install dependencies:
+npm install
+
+4. Start the development server:
+npm run dev
