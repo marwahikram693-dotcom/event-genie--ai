@@ -1,8 +1,8 @@
 # Event Genie AI 🎉
 
 ## a. What it does & Problem it solves
-**Problem:** Planning events in Pakistan is stressful. People forget tasks, go over budget, and waste hours on Google for ideas.
-**Solution:** Event Genie AI is an AI-powered app that creates a complete event plan, budget in PKR, and task checklist in 30 seconds.
+**Problem:** Planning events in US is stressful. People forget tasks, go over budget, and waste hours on Google for ideas.
+**Solution:** Event Genie AI is an AI-powered app that creates a complete event plan, budget in dollars, and task checklist in 30 seconds.
 **For whom:** Students, families, and small event planners.
 
 ## b. Live Deployed URL
@@ -10,7 +10,7 @@
 
 ## c. Features List
 - **AI Event Planner**: Get full event plan from just 1 line
-- **Budget Estimator**: AI breakdown in PKR
+- **Budget Estimator**: AI breakdown in $
 - **Task Checklist**: Timeline with deadlines
 - **Ideas**: Food, decoration, and activity suggestions
 - **Mobile Responsive**: Works on all devices
@@ -18,7 +18,7 @@
 ## d. AI Feature
 **What it does:** Takes event type + guest count + budget and returns complete plan.
 **System Prompt:**
-`You are Event Genie, an expert event planner in Pakistan. Return JSON with: title, 5-point checklist with dates, budget breakdown in PKR, 3 vendor/idea suggestions. Keep tone friendly and practical.`
+`You are Event Genie, an expert event planner global event planner. Return JSON with: title, 5-point checklist with dates, budget breakdown in PKR, 3 vendor/idea suggestions. Keep tone friendly and practical.`
 **Model Used:** GPT-4o via Lovable
 
 ## e. Tools & Services Used
