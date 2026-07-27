@@ -1,7 +1,7 @@
 # Event Genie AI 🎉
 
 ## a. What it does & Problem it solves
-**Problem:** Planning events in US is stressful. People forget tasks, go over budget, and waste hours on Google for ideas.
+**Problem:** Planning events  is stressful. People forget tasks, go over budget, and waste hours on Google for ideas.
 **Solution:** Event Genie AI is an AI-powered app that creates a complete event plan, budget in dollars, and task checklist in 30 seconds.
 **For whom:** Students, families, and small event planners.
 
