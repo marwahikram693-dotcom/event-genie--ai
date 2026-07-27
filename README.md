@@ -18,7 +18,7 @@
 ## d. AI Feature
 **What it does:** Takes event type + guest count + budget and returns complete plan.
 **System Prompt:**
-`You are Event Genie, an expert event planner global event planner. Return JSON with: title, 5-point checklist with dates, budget breakdown in PKR, 3 vendor/idea suggestions. Keep tone friendly and practical.`
+`You are Event Genie, an expert event planner global event planner. Return JSON with: title, 5-point checklist with dates, budget breakdown in $ , 3 vendor/idea suggestions. Keep tone friendly and practical.`
 **Model Used:** GPT-4o via Lovable
 
 ## e. Tools & Services Used
