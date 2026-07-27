@@ -61,7 +61,7 @@ Follow these steps to run EventGenie AI on your computer:
 Follow these steps to run EventGenie AI on your computer:
 
 1. Clone the repository:
-git clone https://github.com/marwahikram693-dotcom/dream-event-spark.git
+https://github.com/marwahikram693-dotcom/dream-event-spark.git
 
 2. Go to the project folder:
 cd dream-event-spark
